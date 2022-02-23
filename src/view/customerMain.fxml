@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customerMain">
+    <children>
+        <TableView fx:id="customerTable" layoutX="29.0" layoutY="100.0" prefHeight="360.0" prefWidth="749.0">
+            <columns>
+                <TableColumn fx:id="customerIDCol" prefWidth="38.0" text="ID" />
+                <TableColumn fx:id="customerNameCol" prefWidth="128.0" text="Name" />
+                <TableColumn fx:id="customerPhoneCol" prefWidth="147.0" text="Phone" />
+                <TableColumn fx:id="customerAddressCol" prefWidth="124.0" text="Address" />
+                <TableColumn fx:id="customerZipCol" prefWidth="70.0" text="Postal Code" />
+                <TableColumn fx:id="customerDivisionCol" prefWidth="119.0" text="State/Province " />
+                <TableColumn fx:id="customerCountryCol" prefWidth="122.0" text="Country" />
+            </columns>
+        </TableView>
+        <Label layoutX="316.0" layoutY="20.0" text="Customers">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Button fx:id="update" layoutX="459.0" layoutY="475.0" mnemonicParsing="false" onAction="#updateHandler" text="Update" />
+        <Button fx:id="add" layoutX="541.0" layoutY="475.0" mnemonicParsing="false" onAction="#addHandler" text="Add" />
+        <Button fx:id="back" layoutX="655.0" layoutY="552.0" mnemonicParsing="false" onAction="#backHandler" text="Back" />
+        <Button fx:id="exit" layoutX="726.0" layoutY="552.0" mnemonicParsing="false" onAction="#exitHandler" text="Exit" />
+        <Button fx:id="delete" layoutX="598.0" layoutY="475.0" mnemonicParsing="false" onAction="#deleteHandler" text="Delete" />
+        <Button layoutX="718.0" layoutY="34.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+        <TextField fx:id="search" layoutX="549.0" layoutY="35.0" promptText="Search by ID or Name" />
+    </children>
+</AnchorPane>
